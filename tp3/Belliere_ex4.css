@@ -1,0 +1,51 @@
+
+#conteneur {
+    padding: 10px 2px;
+    background: linear-gradient(to bottom, lightgray, #fff);
+}
+
+fieldset {
+    background-color: #fff;
+    border-radius: 5px;
+    border: 2px solid #f00;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+
+legend {
+    padding: 10px;
+    color: #fff;
+    background-color: rgb(151, 151, 151);
+    border-radius: 5px;
+}
+
+
+.div1 {
+    font-family: Arial, Helvetica, sans-serif;
+    flex-basis: 10%;
+    min-width: 10%;
+    margin: 10px 0;
+    
+}
+
+.div2 {
+    flex-basis: 90%;
+    min-width: 90%;
+    margin: 10px 0;
+}
+
+.champ {
+    /* border-radius: 2px; */
+    height: 25px;
+}
+
+.champ[type="submit"] {
+    color: #fff;
+    background-color: orangered;
+    border: none;
+    border-radius: 3px;
+    width: 125px;
+    padding: 5px 20px;
+}

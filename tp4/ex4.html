@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex4</title>
+    <script>
+        
+
+function Rectangular_prism(nom, L, W, H) {
+    this.nom = nom;
+    this.L = L;
+    this.W = W;
+    this.H = H;
+    this.volume = () => {
+        return L * H * W;
+    }
+}
+
+var vol = new Rectangular_prism("A", 5, 10, 20);
+document.write(`Volume : ${vol.volume()}`);
+
+function objsize(obj) {
+    var i = 0;
+    for (var _o in obj) i++;
+    return i;
+}
+
+document.writeln(`Taille : ${objsize(vol)}`);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

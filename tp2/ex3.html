@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex3</title>
+    <style>
+        form div {
+            margin: 15px 0;
+        }
+    </style>
+</head>
+<body>
+    <form action="page1.php" method="post" enctype="multipart/form-data">
+        <fieldset>
+            <legend>Your information</legend>
+            <div>
+                <label for="prenom">Prenom :</label>
+                <input type="text" name="prenom" id="prenom" maxlength="50" required="required">
+            </div>
+            <div>
+                <label for="nom">Nom :</label>
+                <input type="text" name="nom" id="nom" maxlength="50" required="required">
+            </div>
+            <div>
+                <label for="email">Email :</label>
+                <input type="email" name="email" id="email">
+            </div>
+            <div>
+                <label for="email1">Email1 :</label>
+                <input type="email" name="email1" id="email1">
+            </div>
+            <div>
+                <label for="age">Age :</label>
+                <input type="number" name="age" id="age" value="18" min="18" max="125" maxlength="3">
+            </div>
+            <div>
+                <label for="sexe">Sexe :</label>
+                <input type="radio" name="sexe" value="homme">Homme
+                <input type="radio" name="sexe" value="femme">Femme
+                <input type="radio" name="sexe" value="autre">N'aime pas répondre
+            </div>
+            <div>
+                <label for="plan">Plan :</label>
+                <input type="checkbox" name="plan" value="Basic">Basic
+                <input type="checkbox" name="plan" value="Premuim" checked="checked">Premium
+                <input type="checkbox" name="plan" value="Titanuim">Titanium
+            </div>
+            <div>
+                <label for="chemise">Chemise :</label>
+                <input type="radio" name="chemise" value="small">Small
+                <input type="radio" name="chemise" value="medium">Medium
+                <input type="radio" name="chemise" value="large">Large
+            </div>
+            <div>
+            <label for="loisirs">Séléctionnez vos loisirs :</label>
+                <select name="loisir" id="loisirs" multiple="multiple" size="3">
+                    <option value="sport">sport</option>
+                    <option value="lecture">lecture</option>
+                    <option value="photo">photo</option>
+                    <option value="jardinage">jardinage</option>
+                    <option value="musique">musique</option>
+                </select>
+            </div>
+            <div>
+                <label for="telephone">Numéro de téléphone :</label>
+                <input type="tel" name="telephone" id="telephone">
+            </div>
+            <div>
+                <label for="couleur">Couleur préférée :</label>
+                <input type="color" name="couleur" id="couleur">
+            </div>
+            <div>
+                <label for="commentaires">Commentaires :</label><br>
+                <textarea name="commentaires" id="commentaires" cols="30" rows="10">Entrez vos commentaires</textarea>
+            </div>
+
+            
+            <button type="submit">Envoyer</button>
+            <button type="reset">Réinitialiser</button>
+        </fieldset>
+    </form> 
+</body>
+</html>

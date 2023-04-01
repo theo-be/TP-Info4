@@ -1,0 +1,23 @@
+
+td {
+    background-color: #ff0;
+}
+
+tr:nth-child(1) td {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+tr td:nth-child(1) {
+    font-size: 32px;
+    font-style: italic;
+}
+
+*[rowspan], *[colspan] {
+    background-color: #f00;
+}
+
+caption {
+    font-size: 32px;
+    font-style: italic;
+}

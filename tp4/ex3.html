@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex3</title>
+    <script>
+        // Question 1
+
+function estPalindrome(chaine) {
+    for (var i = 0; i < Math.floor(chaine.length / 2); i++) {
+        if (chaine[i] != chaine[chaine.length - 1 - i]) return false;
+    }
+    return true;
+}
+var pal = "rotor";
+document.writeln(`${pal} est un palindrome : ` + estPalindrome(pal));
+
+// Question 2
+// document.writeln("exercice".split("").sort().join(""));
+
+function tri(chaine) {
+    return chaine.split("").sort().join("");
+}
+var ch = "exercice";
+document.writeln(`${ch} -> ${tri(ch)}`);
+
+// Question 3
+
+function motCourt (mot) {
+    if (typeof(mot) !== "string") return null;
+    var tab = mot.split(" ");
+    var max = 0;
+    for (var i = 0; i < tab.length; i++) {
+        if (tab[i].length < tab[max].length) max = i;
+    }
+    document.writeln(`Mot le plus court : ${tab[max]}, position ${max + 1}`);
+}
+
+motCourt("Mon premier cours commence aujourd'hui");
+
+// Question 4
+
+function inverser (chaine) {
+    var nouv = [];
+    for (var i = 0; i < chaine.length; i++) {
+        if (chaine[i] == chaine[i].toUpperCase()) nouv.push(chaine[i].toLowerCase());
+        else nouv.push(chaine[i].toUpperCase());
+    }
+    return nouv.join("");
+}
+
+var inv = "Chaine a INVERSER";
+document.writeln(`${inv} -> ${inverser(inv)}`);
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

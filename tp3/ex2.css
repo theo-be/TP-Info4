@@ -1,0 +1,42 @@
+
+ul {
+    display: flex;
+    list-style: none;
+
+}
+
+ul li {
+    padding: 5px;
+    border: 1px solid #000;
+    border-radius: 5px 5px 0 0;
+}
+
+ul li:hover {
+    background-color: #f00;
+}
+
+
+li.active {
+    border-bottom: 0;
+    margin-left: 3px;
+}
+
+li.l1 {
+    background-color: #ff0;
+}
+li.l2 {
+    background-color: darkgreen;
+}
+li.l3 {
+    background-color: #00f;
+}
+
+li a {
+    color: #000;
+    text-decoration: none;
+}
+li a:visited {
+    color: #000;
+    text-decoration: none;
+}
+

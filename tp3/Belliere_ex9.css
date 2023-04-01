@@ -1,0 +1,17 @@
+
+table {
+    background-color: lightblue;
+}
+
+input[type="text"]:hover, select:hover {
+    background-color: #f00;
+}
+
+button:focus {
+    font-size: 32px;
+}
+
+th {
+    font-size: 32px;
+    font-weight: bold;
+}
