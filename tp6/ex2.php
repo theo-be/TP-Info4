@@ -10,12 +10,12 @@
         <label for="nom">Nom</label><input type="text" name="nom" id="nom"><br>
         <label for="prenom">Prenom</label><input type="text" name="prenom" id="prenom"><br>
         Sexe<br>
-        <label for="sexe">Male</label> <input type="radio" name="sexe" id="sexe">
-        <label for="sexe2">Female</label> <input type="radio" name="sexe" id="sexe2">
+        <label for="sexe">Male</label> <input type="radio" name="sexe" id="sexe" value="Male">
+        <label for="sexe2">Female</label> <input type="radio" name="sexe" id="sexe2" value="Female">
         <br>
         <label for="class">Select Class</label>
         <select name="class" id="class">
-            <option value="">--Veuillez choisir une option</option>
+            <option value="">--Veuillez choisir une option--</option>
             <option value="Web">Web</option>
             <option value="XML">XML</option>
             <option value="Java">Java</option>

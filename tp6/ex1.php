@@ -16,13 +16,15 @@
             echo '<tr>';
             echo '<td>X</td>';
             for ($j = 1; $j < $C - 1; $j++) {
-                if (!($i % 2)) echo '<td>X</td>';
-                else echo '<td></td>';
+                echo '<td>';
+                if (!($i % 2) || $i == $L - 1) echo 'X';
+                echo '</td>';
             }
             echo '<td>X</td>';
             echo '</tr>';
         }
         echo '</table>';
+        echo "C : $C, L : $L<br><br>";
     }
 
     toto(7, 14);
@@ -35,14 +37,13 @@
         for ($i = 0; $i < count($chaine); $i++) {
             if ($str1[$i] == strtoupper($str1[$i])) array_push($chaine2, strtolower($str1[$i]));
             else array_push($chaine2, strtoupper($str1[$i]));
-            // echo $chaine2[$i];
         }
         $chaine2 = implode('', $chaine2);
         echo $str1 . ' -> ' . $chaine2;
     }
 
     min_maj("wELcOME MuSSab zNEika");
-    echo '<br><br><br><br><br>';
+    echo '<br><br><br>';
 
     // Question 3
 
@@ -56,7 +57,7 @@
                 $pos = $i + 1;
             }
         }
-        echo $mot . ' position ' . $pos;
+        echo "$mot position $pos";
     }
 
     plus_long("Mon premier cours commence aujourd'hui");
