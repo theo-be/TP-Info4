@@ -1,0 +1,2 @@
+AJAX n'est pas un langage de programmation.
+AJAX utilise simplement une combinaison de : HTML, CSS, JavaScript, DOM, L'objet XMLHttpRequest 

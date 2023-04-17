@@ -1,0 +1,26 @@
+<html>
+<body>
+Votre nom:
+<input type="text" id="txt1">
+<button type="button" onclick="loadDoc()">Envoyer</button>
+<p>: <div id="div1"></div></p> 
+<script> 
+function loadDoc() {
+    var str= document.getElementById("txt1").value;
+    var xhr = new XMLHttpRequest(); 
+    xhr.onreadystatechange = function() { 
+        if (this.readyState == 4 && this.status == 200) { 
+            document.getElementById("div1").innerHTML =  this.responseText;
+        } 
+    }; 
+    xhr.open("POST", "page2.php",true); 
+    $s="nom="+str;
+    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded"); 
+    xhr.send($s); 
+}
+
+// Question 3 : La page simule l'envoi d'un formulaire avec la méthode POST
+// et le serveur renvoie la page page2.php traitée au prealable
+</script> 
+</body>
+</html>

@@ -1,0 +1,109 @@
+<html> 
+<head>
+    <style>
+        .conteneur {
+            margin: 50px;
+        }
+        img {
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body> 
+<div id="div1"> 
+    <h1> XMLHttpRequest Object</h1> 
+    <button type="button" onclick="loadDoc()">Changer le contenu</button> 
+</div>
+<div class="conteneur">
+    <img id="img1" src="affaireenor.jpg" alt="affaireenor.jpg">
+    <div id="description1"></div>
+</div>
+<div class="conteneur">
+    <img id="img2" src="manchotencolere.jpg" alt="manchotencolere.jpg">
+    <div id="description2"></div>
+</div>
+<div class="conteneur">
+    <img id="img3" src="hommequipense.png" alt="hommequipense.png">
+    <div id="description3"></div>
+</div>
+
+
+
+
+<script> 
+
+function loadDoc() {
+    var xhttp = new XMLHttpRequest(); 
+    xhttp.onreadystatechange = function() { 
+        if (this.readyState == 4 && this.status == 200) { 
+            document.getElementById("div1").innerHTML = this.responseText; 
+        }
+    }; 
+    xhttp.open("GET", "file1.txt", true); 
+    xhttp.send(); 
+} 
+
+// Question 2 : une erreur est affichee dans la console
+// Question 4 : Le texte apparait a l'interieur de la balise avec l'identifiant div1
+
+
+document.getElementById("img1").addEventListener("mouseover", image1);
+document.getElementById("img2").addEventListener("mouseover", image2);
+document.getElementById("img3").addEventListener("mouseover", image3);
+
+document.getElementById("img1").addEventListener("mouseleave", () => {
+    document.getElementById("description1").innerText = "";
+});
+document.getElementById("img2").addEventListener("mouseleave", () => {
+    document.getElementById("description2").innerText = "";
+});
+document.getElementById("img3").addEventListener("mouseleave", () => {
+    document.getElementById("description3").innerText = "";
+});
+
+
+
+
+
+function image1 () {
+    var req = new XMLHttpRequest();
+    req.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            document.getElementById("description1").innerHTML = this.responseText;
+        }
+    }
+    req.open("GET", "image1.txt");
+    req.send();
+}
+
+
+function image2 () {
+    var req = new XMLHttpRequest();
+    req.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            document.getElementById("description2").innerHTML = this.responseText;
+        }
+    }
+    req.open("GET", "image2.txt");
+    req.send();
+}
+
+
+function image3 () {
+    var req = new XMLHttpRequest();
+    req.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            document.getElementById("description3").innerHTML = this.responseText;
+        }
+    }
+    req.open("GET", "image3.txt");
+    req.send();
+}
+
+
+
+
+</script> 
+</body> 
+</html>

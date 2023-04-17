@@ -1,0 +1,27 @@
+{ "produits":[
+    { "code": "AZ320",
+      "nom": "Ordinateur",
+      "prix": "750" 
+    },
+    { "code": "LM208",
+      "nom": "Chaise",
+      "prix": "63" 
+    },
+    {
+        "code": "AY320",
+        "nom": "Table",
+        "prix": "100"
+    },
+    {
+        "code": "AY876",
+        "nom": "Lit",
+        "prix": "500"
+    },
+    {
+        "code": "ZX420",
+        "nom": "Verre",
+        "prix": "5"
+    }
+]
+}
+  
